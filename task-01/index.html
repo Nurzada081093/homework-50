@@ -14,6 +14,34 @@
 <body>
 <div id="app"></div>
 
-<script type="text/babel"></script>
+<script type="text/babel">
+    const Movie = ({img, name, year}) => {
+        return (
+            <div className="card">
+                <img className="img" src={img} alt={`Movie: ${name}`} />
+                <div className="content">
+                    <h3 className="title">"{name}"</h3>
+                    <p className="desc">{year}</p>
+                </div>
+            </div>
+        );
+    };
+
+    const movie = (
+        <>
+            <Movie img="https://avatars.dzeninfra.ru/get-zen_doc/9427887/pub_64288a234c38e12608a579d2_64288faf2d81230de3b55bb7/scale_1200" name="Безумно богатые азиаты" year="2018" />
+            <Movie img="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/b08a5c66-b5d4-4cb1-8e55-4fb356ccdf51/600x900" name="Принц Персии: Пески времени" year="2010" />
+            <Movie img="https://upload.wikimedia.org/wikipedia/ru/7/76/Unbroken_poster.jpg" name="Несломленный" year="2014" />
+            <Movie img="https://image.tmdb.org/t/p/original/qLoSkeASVb8Kw1ssOsUWbgWqP43.jpg" name="Мальчик в полосатой пижаме" year="2008" />
+            <Movie img="https://m-p.ru/wp-content/uploads/2023/09/titan2-736x580.jpeg" name="Titanic" year="1997" />
+            <Movie img="https://avatars.dzeninfra.ru/get-zen_doc/3505723/pub_5ee4665b9a246076d4755b86_5ee469d8b0200314ab980d6e/scale_1200" name="Отель Мумбаи: Противостояние" year="2018" />
+            <Movie img="https://upload.wikimedia.org/wikipedia/ru/thumb/6/6a/%D0%9F%D0%B5%D0%BB%D0%B5_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D1%8B_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%29.jpg/640px-%D0%9F%D0%B5%D0%BB%D0%B5_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D1%8B_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%29.jpg" name="Пеле: Рождение легенды" year="2015" />
+        </>
+    );
+
+    const app = document.getElementById('app');
+    ReactDOM.createRoot(app).render(movie);
+
+</script>
 </body>
 </html>
