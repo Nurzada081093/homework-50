@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 330px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    animation: removeOverflow 1s forwards;
+}
+
+@keyframes removeOverflow{
+    to {
+        overflow: initial;
+    }
+}
+
+.card:not(:hover) {
+    animation: addOverflow 1s forwards;
+}
+
+@keyframes addOverflow {
+    0% {
+        overflow: initial;
+    }
+
+    100% {
+        overflow: hidden;
+    }
+}
+
+.card .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card .content {
+    position: absolute;
+    width: 90%;
+    background: #fff;
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .content {
+    animation: showData 1s forwards;
+}
+
+@keyframes showData {
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(-6rem);
+    }
+}
+
+.card:not(hover) .content {
+    animation: hideData 1s forwards;
+}
+
+@keyframes hideData {
+    0% {
+        transform: translateY(-6rem);
+    }
+
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(0.5rem);
+    }
+}
+
+.content .title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .desc {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+
+
