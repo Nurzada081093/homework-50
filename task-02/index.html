@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -11,6 +15,79 @@
 
 <div id="app"></div>
 
-<script type="text/babel"></script>
+<script type="text/babel">
+    const Header = ({img, name, button}) => {
+        return (
+            <div className="header">
+                <div className="container header-container">
+                    <a href="#" className="logo">
+                        <img className="logo-img" src={img} alt={name} />
+                    </a>
+                    <button className="btn-cart" type="button">{button}</button>
+                </div>
+            </div>
+        );
+    };
+
+    const Sidebar = ({name1, name2, name3, name4}) => {
+        return (
+            <nav className="container">
+                <ul className="main-nav-list">
+                    <li className="main-nav-item">
+                        <a href="#" className="main-nav-link">{name1}</a>
+                    </li>
+                    <li className="main-nav-item">
+                        <a href="#" className="main-nav-link">{name2}</a>
+                    </li>
+                    <li className="main-nav-item">
+                        <a href="#" className="main-nav-link">{name3}</a>
+                    </li>
+                    <li className="main-nav-item">
+                        <a href="#" className="main-nav-link">{name4}</a>
+                    </li>
+                </ul>
+            </nav>
+
+        );
+    };
+
+    const Content = ({title, text, text1, img, name}) => {
+        return (
+            <main className="main-block container">
+                <h1 className="main-title">{title}</h1>
+                <div className="main-info">
+                    <p>{text}</p>
+                    <p>{text1}</p>
+                </div>
+                <img src={img} alt={name}/>
+            </main>
+        );
+    };
+
+    const Card = ({img, name}) => {
+        return (
+            <div className="card">
+                <img className="img" src={img} alt={name} />
+                <div className="content">
+                    <h3 className="title">"{name}"</h3>
+                </div>
+            </div>
+        );
+    };
+
+    const Footer = ({text1, text2}) => {
+        return (
+            <footer className="footer">
+                <div className="container footer-info">
+                    <p className="footer-name">{text1}</p>
+                    <p className="address">{text2}</p>
+                </div>
+            </footer>
+        );
+    };
+
+
+
+</script>
 </body>
 </html>
