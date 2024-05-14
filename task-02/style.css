@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-    padding: 32px 0 25px;
+    padding: 20px 0 20px;
     background: #E1EEFB;
     margin-bottom: 43px;
 }
@@ -51,6 +51,7 @@ body {
     border: 1px solid #2B7BC6;
     background:#FFF;
     padding: 6px 12px 6px 13px;
+    cursor: pointer;
 }
 
 .btn-cart:hover {
@@ -62,10 +63,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
-/*.main-nav-item {*/
-/*    display: inline-block;*/
-/*}*/
 
 .main-nav-link {
     color: #2B7BC6;
@@ -104,7 +101,7 @@ body {
     margin-top: 0;
 }
 
-.main-block img{
+.image{
     position: absolute;
     top: 0;
     left: 15px;
@@ -116,13 +113,12 @@ body {
     width: 250px;
     height: 320px;
     border: 1px solid #aca2a2;
-    margin-left: 10%;
     margin-bottom: 50px;
     background: white;
     border-radius: 10px;
 }
 
-.card img {
+.img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -140,7 +136,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 20px;
     padding: 20px 0;
 }
 
@@ -155,6 +150,13 @@ body {
     color: #111;
     font-size: 14px;
     font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
 
