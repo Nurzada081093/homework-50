@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1180px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
@@ -62,6 +62,11 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.main-nav-item {
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
 }
 
 .main-nav-link {
@@ -157,6 +162,24 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 50px;
+}
+
+.sidebar {
+    width: 20%;
+    margin-top: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-history {
+    font-size: 23px;
+}
+
+.text-info{
+    width: 70%;
 }
 
 

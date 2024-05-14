@@ -31,23 +31,30 @@
         );
     };
 
-    const Sidebar = ({name1, name2, name3, name4}) => {
+    const Sidebar = ({name1, name2, name3, name4, title, text}) => {
         return (
-            <nav className="container">
-                <ul className="main-nav-list">
-                    <li className="main-nav-item">
-                        <a href="#" className="main-nav-link">{name1}</a>
-                    </li>
-                    <li className="main-nav-item">
-                        <a href="#" className="main-nav-link">{name2}</a>
-                    </li>
-                    <li className="main-nav-item">
-                        <a href="#" className="main-nav-link">{name3}</a>
-                    </li>
-                    <li className="main-nav-item">
-                        <a href="#" className="main-nav-link">{name4}</a>
-                    </li>
-                </ul>
+
+            <nav className="nav container">
+                <aside className="sidebar">
+                    <ul className="main-nav-list">
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{name1}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{name2}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{name3}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{name4}</a>
+                        </li>
+                    </ul>
+                </aside>
+                <div className="text-info">
+                    <h3 className="title-history">{title}</h3>
+                    <p>{text}</p>
+                </div>
             </nav>
         );
     };
@@ -99,7 +106,7 @@
     const page = (
         <>
             <Header img="https://i.pinimg.com/originals/b3/ee/06/b3ee064ee69053b9d1f0231eebb25500.jpg" name="Sweet cake" button="Войти"/>
-            <Sidebar name1="Торты" name2="Пирожные" name3="Капкейки" name4="Макаронс"/>
+            <Sidebar name1="Торты" name2="Пирожные" name3="Капкейки" name4="Макаронс" title="История кондитера" text="Профессия повар развивалась вместе с цивилизацией, так что можно сказать это древнейшая профессия. Первые блюда выглядели просто как обожжённые на открытом костре полусырые куски мяса или рыбы. Огнём люди пользовались как минимум со среднего палеолита, но это не были повара. Опервых профессионалах, зарабатывающих таким ремеслом на жизнь, гласят отметки греческой цивилизации на острове Крит 2600-го года до н.э. Для солдат царя пищу готовил из отборных продуктов специально нанятый мастер кулинарного дела. Можно смело предположить, что в более древних культурах Египта, Финикии и Шумер также были профессиональные кулинары, работающие для семей знатных людей и правителей. Позже появились такие понятия, как санитарные нормы, регулирующие работу таких специалистов."/>
             <Content title="Кондитерский магазин" text="Кондитерский магазин «Sweet cake» был создан на базе, действующей и в настоящее время кондитерской «КОНФЕТТЕРИА», ведь для любого кондитера очень важны ингредиенты и инструменты для создания гармонии вкуса и красоты. Мы постарались наполнить магазин качественным и необходимым ассортиментом, который был проверен и опробован на собственном опыте. Магазин обладает возможностями доставки заказов начиная с курьерских по Москве до зарубежной отправки посылок, а также приемом оплаты любым удобным для Вас способом." text1="Ассортимент постоянно пополняется новыми товарами и включает в себя пищевые красители, мастику для обтяжки и лепки, посыпки и украшение для тортов, кондитерскую упаковку для тортов, капкейков и пирожных,  формы для выпечки, кондитерские инвентарь, фотопечать на сахарной и вафельной бумаге и многое другое. Представленные товары идеально подойдут как для предприятий питания, так и для выпечки кондитерских изделий в домашних условиях." img="https://i.pinimg.com/736x/f7/36/69/f736690fc229acabfe7d59abe78673cf.jpg"
             img1="https://promocake.ru/d/k2154.jpg" name1="Шоколадные капкейки" img2="https://vsedoma-family.ru/sites/default/files/styles/product/public/product/f5318408d82191fab6cac8a749d4198e.jpg?itok=2KICA6I0" name2="Macarons" img3="https://avatars.mds.yandex.net/get-altay/5649895/2a0000017d0bf16c23bcc140fe22d7604477/orig" name3="Торты"/>
             <Footer text1="© Sweet_cake.kg — 2020-2024" text2="г.Бишкек, ул. Юнусалева 135"/>
